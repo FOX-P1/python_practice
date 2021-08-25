@@ -1,5 +1,4 @@
-
-
+# notice: 콘솔로 파일을 불러올시 Q_9의 정답까지 같이 볼려면 argv를 콘솔에 추가로 넣어줄 것 !!!!!
 
 class Calculator:
     def __init__(self):
@@ -95,18 +94,20 @@ print("Q_8: ", Round(17/3))
 
 # --------------------------------------------------
 
-# import sys
+import sys
 
-# list = sys.argv
-# print("sys.argvs: ", list)
+list1 = sys.argv 
+# 여기서 list1에 자주 사용되는 단어인 list를 넣으면 기존에 list의
+# 정의가 덮어 씌워지므로 절대 함수명으로 자주 쓰이는 단어를 변수로 선언하면 안된다.
+print("sys.argvs: ", list1)
 
-# def sumArgs(list):
-#     result = 0
-#     for i in list[1:]:
-#         result += int(i)
-#     return result
+def sumArgs(list):
+    result = 0
+    for i in list[1:]:
+        result += int(i)
+    return result
 
-# print('Q_9: ', sumArgs(list))
+print('Q_9: ', sumArgs(list1))
 
 # --------------------------------------------------
 
